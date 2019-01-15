@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RabbitListener(queues = "hello")
 public class HelloReceiver {
 
-    @Autowired
+    @Autowired(required = false)
     private UserService userService;
 
     @RabbitHandler
