@@ -3,6 +3,7 @@ server:
   servlet:
     context-path: /mvc
 
+
 spring:
     thymeleaf:
       prefix: classpath:/templates/
@@ -31,4 +32,15 @@ spring:
       testOnReturn: false
       poolPreparedStatements: true
       maxOpenPreparedStatements: 20
+    redis:
+      host: localhost
+      port: 6379
+      database: 0
+      jedis:
+        pool:
+          max-active: 8
+          max-wait: -1ms
+logging:
+  level:
+    com: debug
 
