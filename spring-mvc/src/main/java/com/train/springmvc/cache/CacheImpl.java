@@ -7,6 +7,8 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Configuration
 public class CacheImpl implements Cache {
 
@@ -18,5 +20,11 @@ public class CacheImpl implements Cache {
     @Cacheable(value={"'UserCacheImpl.getUser'"},key = "#userId")
     public User getUserByUserId(Integer userId) {
         return userRepository.getUserByUserId(userId);
+    }
+
+    @Override
+    @Cacheable(value={"'UserCacheImpl.getAllUsers'"})
+    public List<User> getAllUsers() {
+        return userRepository.getAllUser();
     }
 }
