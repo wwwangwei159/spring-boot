@@ -39,9 +39,7 @@ public class UserServiceImpl implements UserService {
         } catch (ExecutionException e) {
             e.printStackTrace();
         }
-
         return user;
-
     }
 
     @Override
@@ -60,10 +58,5 @@ public class UserServiceImpl implements UserService {
     public void saveUser(User user) {
         userRepository.save(user);
     }
-
-
-
-
-
 
 }

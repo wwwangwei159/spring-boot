@@ -1,4 +1,4 @@
-package com.train.springmvc;
+package com.train.springmvc.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

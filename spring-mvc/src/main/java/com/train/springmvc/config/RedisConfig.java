@@ -1,4 +1,4 @@
-package com.train.springmvc.cache;
+package com.train.springmvc.config;
 
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
